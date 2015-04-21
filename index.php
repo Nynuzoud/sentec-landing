@@ -16,10 +16,10 @@
 			</main>
 		</div>
 	</div>
-	<script src="http://test-sentec.geosite.ru/wp-content/themes/bones/library/js/tab.min.js" type="text/javascript">
+	<!--<script src="http://test-sentec.geosite.ru/wp-content/themes/bones/library/js/tab.min.js" type="text/javascript">
 		var c = jQuery.noConflict()
 	    c(document).ready(function() {
 	        c('.menu .item').tab();
 	    });
-	</script>
+	</script>-->
 <?php get_footer(); ?>

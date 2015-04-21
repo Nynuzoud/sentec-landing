@@ -31,11 +31,11 @@
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script src="http://test-sentec/geosite.ru/wp-includes/js/jquery/ui/tabs.min.js"></script>
+		<!--<script src="http://test-sentec/geosite.ru/wp-includes/js/jquery/ui/tabs.min.js"></script>
 		<script src="http://test-sentec.geosite.ru/wp-content/themes/bones/library/js/index.js" type="text/javascript"></script>
 		<script src="http://test-sentec.geosite.ru/wp-content/themes/bones/library/js/package.js" type="text/javascript"></script>
 		<script src="http://test-sentec.geosite.ru/wp-content/themes/bones/library/js/tab.min.js" type="text/javascript"></script>
-		<link rel="stylesheet" href="http://test-sentec.geosite.ru/wp-content/themes/bones/library/css/tab.min.css">
+		<link rel="stylesheet" href="http://test-sentec.geosite.ru/wp-content/themes/bones/library/css/tab.min.css">-->
 		<?php // wordpress head functions ?>
 		<?php wp_head(); ?>
 		<?php // end of wordpress head ?>
