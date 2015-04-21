@@ -1,0 +1,37 @@
+/*
+	Variable Grid System (Fluid Version).
+	Learn more ~ http://www.spry-soft.com/grids/
+	Based on 960 Grid System - http://960.gs/ & 960 Fluid - http://www.designinfluences.com/
+
+	Licensed under GPL and MIT.
+*/
+/*MIXINS
+*********************************************/
+@white: #fff;
+@orange: #FF9152;
+@black: #47525D;
+
+.ulight(@font-family: 'Ubuntu', sans-serif; @font-weight: 300) {
+	font-family: @font-family;
+	font-weight: @font-weight;
+}
+.umedium(@font-family: 'Ubuntu', sans-serif; @font-weight: 500) {
+	font-family: @font-family;
+	font-weight: @font-weight;
+}
+.roboto(@font-family: 'Roboto Slab', serif; @font-weight: 700) {
+	font-family: @font-family;
+	font-weight: @font-weight;
+}
+.transition(@duration: 0.2s, @ease: ease-out) {
+	-webkit-transition: all @duration @ease;
+	-moz-transition: all @duration @ease;
+	-o-transition: all @duration @ease;
+	transition: all @duration @ease;
+}
+.transitionVisibility(@duration: 0.2s, @ease: ease-in) {
+	-webkit-transition: visibility 0s @ease @duration,opacity @duration @ease;
+	-moz-transition: visibility 0s @ease @duration,opacity @duration @ease;
+	-o-transition: visibility 0s @ease @duration,opacity @duration @ease;
+	transition: visibility 0s @ease @duration,opacity @duration @ease;
+}

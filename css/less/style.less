@@ -1,0 +1,265 @@
+/*
+  Variable Grid System (Fluid Version).
+  Learn more ~ http://www.spry-soft.com/grids/
+  Based on 960 Grid System - http://960.gs/ & 960 Fluid - http://www.designinfluences.com/
+
+  Licensed under GPL and MIT.
+*/
+
+@import "grid";
+@import "mixins";
+@import "elements";
+
+
+
+/* FRONTEND CSS
+*********************************************/
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,500&subset=cyrillic,latin);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:700&subset=cyrillic,latin);
+html {
+  .ulight;
+  color: @black;
+  background: @white;
+}
+body {
+  margin: 0;
+}
+
+/* MEDIA QUERIES
+*********************************************/
+@media (min-width: 320px) {
+  html {
+    font-size: 9px;
+  }
+  #header_logo {
+    background: url(http://test-sentec.geosite.ru/wp-content/themes/bones/library/images/logo.gif) no-repeat;
+    width: 180px;
+    height: 45px;
+    position: absolute;
+    z-index: 1000;
+    left: 30px;
+    top: 20px;
+  }
+  #header_phone {
+    font-size: 24px;
+    line-height: 20px;
+    .roboto;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    z-index: 1000;
+  }
+  .header {
+    background : -moz-linear-gradient(50% 0% -90deg,rgba(255, 255, 255, 0.2) 0%,rgba(61, 70, 77, 0.2) 100%);
+    background : -webkit-linear-gradient(-90deg, rgba(255, 255, 255, 0.2) 0%, rgba(61, 70, 77, 0.2) 100%);
+    background : -webkit-gradient(linear,50% 0% ,50% 100% ,color-stop(0,rgba(255, 255, 255, 0.2) ),color-stop(1,rgba(61, 70, 77, 0.2) ));
+    background : -o-linear-gradient(-90deg, rgba(255, 255, 255, 0.2) 0%, rgba(61, 70, 77, 0.2) 100%);
+    background : -ms-linear-gradient(-90deg, rgba(255, 255, 255, 0.2) 0%, rgba(61, 70, 77, 0.2) 100%);
+    background : linear-gradient(180deg, rgba(255,255,255,0.2) 0, rgba(61, 70, 77, 0.2) 100%);
+   }
+  #inner-header {
+    width: 100%;
+    height: 100vh;
+  }
+  .slider {
+    height: inherit;
+    overflow: hidden;
+    position: relative;
+    width: inherit;
+  }
+
+  .slides {
+    height: inherit;
+    opacity: 0;
+    position: absolute;
+    width: inherit;
+    z-index: 0;
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+    -moz-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+    -o-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+    transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+  }
+
+  .slide1 { 
+    background: url(http://test-sentec.geosite.ru/wp-content/themes/bones/library/images/sdm1.jpg) 75% 36% no-repeat;
+    width: 100%;
+    height: 100vh;
+  }
+  .slide2 { 
+    background: url(http://test-sentec.geosite.ru/wp-content/themes/bones/library/images/sdm3.jpg) 75% 36% no-repeat; 
+    width: 100%;
+    height: 100vh;
+  }
+  .slide3 { 
+    background: url(http://test-sentec.geosite.ru/wp-content/themes/bones/library/images/sdm4.jpg) 75% 36% no-repeat; 
+    width: 100%;
+    height: 100vh;
+  }
+
+  #slide1:checked ~ .slider > .slide1,
+  #slide2:checked ~ .slider > .slide2,
+  #slide3:checked ~ .slider > .slide3 {
+    opacity: 1;
+    z-index: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+
+  #inner-header > input {
+    display: none;
+  }
+
+  #inner-header .controls {
+    left: 20%;
+    top: 90%;
+    margin-left: -98px;
+    position: absolute;
+    z-index: 100;
+  }
+
+  #inner-header label {
+    cursor: pointer;
+    display: inline-block;
+    height: 8px;
+    margin: 25px 12px 0 16px;
+    position: relative;
+    width: 8px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: background ease-in-out .5s;
+    -moz-transition: background ease-in-out .5s;
+    -o-transition: background ease-in-out .5s;
+    transition: background ease-in-out .5s;
+  }
+
+  #inner-header label:hover, 
+  #slide1:checked ~ .controls label:nth-of-type(1),
+  #slide2:checked ~ .controls label:nth-of-type(2),
+  #slide3:checked ~ .controls label:nth-of-type(3),
+  {
+    background: @black;
+  }
+
+  #inner-header label:after {
+    border: 2px solid @black;
+    content: " ";
+    display: block;
+    height: 12px;
+    left: -4px;
+    position: absolute;
+    top: -4px;
+    width: 12px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+  }
+  .slider {
+    .slider_text {
+      z-index: 500;
+      width: 500px;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      .title {
+        color: @orange;
+        .roboto;
+        font-size: 2.14285714286em;
+      }
+      ul {
+        margin-left: 0;
+        -webkit-padding-start: 15px;
+        li {
+          display: list-item;
+          list-style-type: square;
+          .ulight;
+          line-height: 20px;
+        }
+      }
+      .buy, .more {
+        display: block;
+        width: 230px;
+        height: 55px;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        line-height: 55px;
+        letter-spacing: 1px;
+        border-radius: 10px;
+        float: left;
+      }
+      .more {
+        border: 1px solid @black;
+        color: @black;
+        &:hover {
+          background: @black;
+          color: @white;
+        }
+      }
+      .buy {
+        background: @orange;
+        color: @white;
+        box-shadow: 0 5px 0 0 darken(@orange, 5%);
+        margin-right: 10px;
+        &:active {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+#content {
+  background: @orange;
+  padding: 40px 0;
+  #info_title {
+    display: block;
+    color: @white;
+    .roboto;
+    font-size: 30px;
+    line-height: 20px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 568px) {
+
+}
+/* Extra small devices (phones, less than 768px) */
+/* No media query -> mobile first strategy */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* for higher resolutions (android and retina) */
+@media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (max--moz-device-pixel-ratio: 1.5) {
+  
+}
